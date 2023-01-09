@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+$bg1:#ffb400;
+$bg2:#111111;
+$text-color:white;
+$btn-color:#2B2A2A ; 
+$bg-text:#212121;
+$mb-btn-color:#444;
+
+
+*{
+    margin:0 ;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif ;
+    
+ }
+ body{
+    background-color: $bg2;
+ }
+ .nav{
+    position: fixed;
+    z-index: 10;
+    right: 12px;
+    top: 50%;
+     width: 10%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     ul{
+         list-style-type: none;
+         width:50px ;
+         position: absolute;
+         right: 16px;
+         justify-content: space-between;
+         .active{
+             background-color: $bg1;
+         }
+         li{
+             position: relative;
+             text-align: center;
+             margin: 18px auto;
+             line-height: 50px;
+             background-color: $btn-color;
+             width: 50px;
+             height: 50px;
+             border-radius: 50%;
+             color:white ;
+             transition: 0.2s;
+             text-transform: uppercase;
+             font-weight: 500;
+             a{
+                color: $text-color;
+            }
+             i{
+                 position: relative;
+                 z-index: 1;
+                
+             }
+             span{
+                 position: absolute;
+                 top: 0%;
+                 right: 0%;
+                 opacity: 0;
+                 border-radius: 30px;
+                 background-color: $bg1;
+                 z-index: -1;
+                 transition: 0.2s ease-in-out;
+                 
+             }
+             &:hover span{
+              z-index: 0;
+              opacity: 1;
+             //  width: 120px;
+             width: fit-content;
+              text-align: left;
+              padding:0 20px;
+              padding-right: 60px;
+             }
+         }
+         
+     }
+     
+ }
+
+ section{
+     
+    .title{
+        font-family:  'Poppins', sans-serif;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 75px;
+        position: relative;
+        h1{
+            position: relative;
+            z-index: 1;
+            color: $text-color;
+            font-size: 56px;
+            font-weight: 900;
+            span{
+                color: $bg1;
+            }
+        }
+        .bg-title{
+            font-size: 110px;
+            letter-spacing: 10px;
+            color: $bg-text;
+            font-weight: 800;
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            right: 0%;
+            transform: translateY(-50%);
+            z-index: 0;
+        }
+    }
+    .card-container{
+        display: flex;
+        margin: 0 11%;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        .card{
+            position: relative;
+            // padding: 3% 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center;
+            width: 350px;
+            height: 394px;
+            margin: 16px;
+            background-color: $btn-color;
+            border-radius: 30px;
+            &:hover .image img{
+                border-color: $bg1;
+            }
+            .image{
+            
+                width: 100%;
+                height: 200px;
+                background-image: url(../images/works/birmingham-museums-trust-nbneQlI2M1A-unsplash.jpg);
+                background-size: cover;
+                border-radius: 30px 30px 0 0;
+                border-bottom: 6px $bg1 solid;
+                img{
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    margin: 16px auto;
+                    position: relative;
+                    transform: translateY(100%);
+                    border: 6px $text-color solid;
+                    transition: 0.1s ease-in;
+                }
+            }
+            .card-data{
+                position: relative;
+                padding: 18% 5%;
+                color: $text-color;
+                h3{
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                }
+                h5{
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    opacity: 0.8;
+                }
+
+                a{
+                    position: relative;
+                    font-size: 15px;
+                    font-weight: 600;
+                    z-index: 1;
+                    top: 32px;
+                    padding: 8px 0px 8px 18px;
+                    border-radius: 75px 75px;
+                    border: 1px solid $bg1;
+                    color: $text-color;
+                    text-overflow: ellipsis;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    
+                   &::before{
+                        z-index: -3;
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: 0%;
+                        left: 0;
+                        bottom: 0%;
+                        // opacity: 0;
+                        background-color: $bg1;
+                        border-radius: 50%;
+                        transform: scaleX(0.3);
+                        transform-origin: right;
+                        transition: 0.3s ease-out;  
+                   }
+                   &:hover::before{
+                    // transform: translateX(0%);
+                    transform: scaleX(1);
+                    z-index: -1;
+                    opacity: 1;
+                    border-radius: 75px 75px;
+    
+                    
+                    }
+                    span{
+                        background-color: $bg1;
+                        padding: 16px 18px;
+                        padding: 9px 9px;
+                        margin-left: 12px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+ }
+
+ @media only screen and (max-width: 1000px){
+    .nav{
+        height: 60px;
+        position: fixed;
+        flex-direction: row;
+        top: unset;
+        bottom: 0%;
+        right: unset;
+        margin: auto;
+        width: 100%;
+        background-color: $btn-color;
+        align-items: center;
+        ul{
+            right: 0%;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            align-items: center;
+    
+            li{
+                width: 45px;
+                height: 45px;
+                background-color: $mb-btn-color;
+                span{
+                    display: none;
+                }
+            }
+        }
+    }
+    section{
+        .card-container{
+            margin-bottom: 80px;
+        }
+    }
+ }
+
+
+ @media only screen and (max-width: 700px){
+
+    section{
+        .title{
+            padding: 60px 12px 60px;
+            h1{
+                text-align: left;
+                font-size: 35px;
+            }
+            .bg-title{
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px){
+    section{
+        .card-container{
+            margin: 0%;
+ 
+        }
+    }
+}
+@media only screen and (max-width: 350px){
+    section{
+        .card-container{
+            .card{
+                .card-data{
+                    top: 16px;
+                }
+            }
+        }
+    }
+}

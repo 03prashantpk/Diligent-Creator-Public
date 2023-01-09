@@ -1,0 +1,472 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #111111;
+}
+
+.nav {
+  position: fixed;
+  z-index: 10;
+  right: 12px;
+  top: 50%;
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.nav ul {
+  list-style-type: none;
+  width: 50px;
+  position: absolute;
+  right: 16px;
+  justify-content: space-between;
+}
+.nav ul .active {
+  background-color: #ffb400;
+}
+.nav ul li {
+  position: relative;
+  text-align: center;
+  margin: 18px auto;
+  line-height: 50px;
+  background-color: #2B2A2A;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  transition: 0.2s;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.nav ul li a {
+  color: white;
+}
+.nav ul li i {
+  position: relative;
+  z-index: 1;
+}
+.nav ul li span {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  opacity: 0;
+  border-radius: 30px;
+  background-color: #ffb400;
+  z-index: -1;
+  transition: 0.2s ease-in-out;
+}
+.nav ul li:hover span {
+  z-index: 0;
+  opacity: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: left;
+  padding: 0 20px;
+  padding-right: 60px;
+}
+
+section {
+  height: 100vh;
+}
+section .title {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 75px;
+  position: relative;
+}
+section .title h1 {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 56px;
+  font-weight: 900;
+}
+section .title h1 span {
+  color: #ffb400;
+}
+section .title .bg-title {
+  font-size: 110px;
+  letter-spacing: 10px;
+  color: #212121;
+  font-weight: 800;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  right: 0%;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+section .container {
+  display: flex;
+  margin: 0 11%;
+}
+section .container .left {
+  width: 50%;
+  padding: 12px;
+}
+section .container .left h1 {
+  font-size: 26px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+section .container .left .list-container {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 120px;
+}
+section .container .left .list-container ul {
+  list-style: none;
+}
+section .container .left .list-container ul li {
+  margin: 16px 0;
+  color: white;
+}
+section .container .left .list-container ul li span {
+  opacity: 0.8;
+}
+section .container .left a {
+  position: relative;
+  font-size: 15px;
+  font-weight: 600;
+  z-index: 1;
+  top: 32px;
+  padding: 16px 16px 16px 36px;
+  padding-right: 0%;
+  border-radius: 75px 75px;
+  border: 1px solid #ffb400;
+  color: white;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+section .container .left a::before {
+  z-index: -3;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0%;
+  left: 0;
+  bottom: 0%;
+  background-color: #ffb400;
+  border-radius: 50%;
+  transform: scaleX(0.2);
+  transform-origin: right;
+  transition: 0.3s ease-out;
+}
+section .container .left a:hover::before {
+  transform: scaleX(1);
+  z-index: -1;
+  opacity: 1;
+  border-radius: 75px 75px;
+}
+section .container .left a span {
+  background-color: #ffb400;
+  padding: 16px 18px;
+  margin-left: 12px;
+  border-radius: 50%;
+}
+section .container .right {
+  width: 50%;
+}
+section .container .right .right-up, section .container .right .right-down {
+  display: flex;
+  justify-content: space-between;
+}
+section .container .right .right-up div, section .container .right .right-down div {
+  width: 100%;
+  border: 1px solid #212121;
+  padding: 20px 30px 25px 40px;
+  margin-bottom: 30px;
+  margin-right: 30px;
+}
+section .container .right .right-up div h1, section .container .right .right-down div h1 {
+  color: #ffb400;
+  font-size: 50px;
+  font-weight: 700;
+}
+section .container .right .right-up div h3, section .container .right .right-down div h3 {
+  color: white;
+  position: relative;
+  padding-left: 40px;
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+section .container .right .right-up div h3::before, section .container .right .right-down div h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 13px;
+  width: 30px;
+  height: 1px;
+  background: #777;
+}
+
+section.skills {
+  height: 90vh;
+}
+section.skills h1 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+}
+section.skills .skill-set {
+  padding: 2% 9%;
+  display: flex;
+  justify-content: space-evenly;
+}
+section.skills .skill-set .skill-container {
+  margin: 2%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.skills .skill-set .skill-container .skill-name {
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+section.skills .skill-set .skill-container .skill {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 12px solid #ffb400;
+}
+section.skills .skill-set .skill-container .skill::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: -14px;
+  width: 93px;
+  height: 93px;
+  border-radius: 50%;
+  border: 15px solid #2B2A2A;
+}
+section.skills .skill-set .skill-container .html::before {
+  -webkit-clip-path: polygon(8% 0%, 50% 50%, 50% 0);
+          clip-path: polygon(8% 0%, 50% 50%, 50% 0);
+}
+section.skills .skill-set .skill-container .css::before {
+  -webkit-clip-path: polygon(0 15%, 50% 50%, 50% 0, 0 0);
+          clip-path: polygon(0 15%, 50% 50%, 50% 0, 0 0);
+}
+section.skills .skill-set .skill-container .js::before {
+  -webkit-clip-path: polygon(0 50%, 50% 50%, 50% 0, 0 0);
+          clip-path: polygon(0 50%, 50% 50%, 50% 0, 0 0);
+}
+section.skills .skill-set .skill-container .wordpress::before {
+  -webkit-clip-path: polygon(8% 0%, 50% 50%, 50% 0);
+          clip-path: polygon(8% 0%, 50% 50%, 50% 0);
+}
+section.skills .skill-set .skill-container .python::before {
+  -webkit-clip-path: polygon(0 15%, 50% 50%, 50% 0, 0 0);
+          clip-path: polygon(0 15%, 50% 50%, 50% 0, 0 0);
+}
+section.skills .skill-set .skill-container .nodejs::before {
+  -webkit-clip-path: polygon(0 100%, 20% 100%, 50% 50%, 50% 0, 0 0);
+          clip-path: polygon(0 100%, 20% 100%, 50% 50%, 50% 0, 0 0);
+}
+section.skills .skill-set .skill-container .sql::before {
+  -webkit-clip-path: polygon(0 15%, 50% 50%, 50% 0, 0 0);
+          clip-path: polygon(0 15%, 50% 50%, 50% 0, 0 0);
+}
+section.skills .skill-set .skill-container .react::before {
+  -webkit-clip-path: polygon(0 100%, 50% 100%, 50% 50%, 50% 0, 0 0);
+          clip-path: polygon(0 100%, 50% 100%, 50% 50%, 50% 0, 0 0);
+}
+
+@media only screen and (max-width: 1400px) {
+  section .container {
+    margin: 0 8%;
+  }
+}
+@media only screen and (max-width: 1250px) {
+  section {
+    margin-bottom: 10%;
+  }
+  section .container {
+    margin: 0 6%;
+  }
+  section .container .list-container ul li span {
+    display: block;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  body {
+    overflow-y: scroll;
+    background-color: #111111;
+  }
+
+  .nav {
+    height: 60px;
+    position: fixed;
+    flex-direction: row;
+    top: unset;
+    bottom: 0%;
+    right: unset;
+    margin: auto;
+    width: 100%;
+    background-color: #2B2A2A;
+    align-items: center;
+  }
+  .nav ul {
+    right: 0%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+  }
+  .nav ul li {
+    width: 45px;
+    height: 45px;
+    background-color: #444;
+  }
+  .nav ul li span {
+    display: none;
+  }
+
+  section {
+    height: 170vh;
+  }
+  section .container {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section .container .left {
+    width: 100%;
+    margin-bottom: 160px;
+  }
+  section .container .left .list-container {
+    width: 80%;
+    width: 100%;
+  }
+  section .container .left .list-container ul {
+    margin: 0 0px;
+  }
+  section .container .left .list-container ul li span {
+    display: unset;
+  }
+  section .container .right {
+    width: 100%;
+  }
+  section .container .right .right-up, section .container .right .right-down {
+    justify-content: space-around;
+  }
+}
+@media only screen and (max-width: 760px) {
+  section.skills {
+    height: 150vh;
+  }
+  section.skills .skill-set {
+    flex-wrap: wrap;
+  }
+  section.skills .skill-set .skill-container {
+    width: 35%;
+  }
+}
+@media only screen and (max-width: 560px) {
+  section {
+    height: 210vh;
+  }
+  section .title {
+    padding: 40px 12px;
+  }
+  section .title h1 {
+    text-align: left;
+    font-size: 35px;
+  }
+  section .title .bg-title {
+    display: none;
+  }
+  section .image {
+    width: 230px;
+    height: 230px;
+    background-image: url(../images/albert-dera-ILip77SbmOE-unsplash.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    margin: 16px auto 0;
+    border-radius: 50%;
+    border: 4px solid #252525;
+  }
+  section .container {
+    margin: 0;
+  }
+  section .container .left {
+    margin-bottom: 80px;
+  }
+  section .container .left h1 {
+    font-size: 21px;
+  }
+  section .container .left .list-container {
+    padding: 0 12px;
+    width: 80%;
+  }
+  section .container .left .list-container ul li span {
+    display: block;
+  }
+  section .container .right .right-up div h1, section .container .right .right-down div h1 {
+    font-size: 40px;
+  }
+  section .container .right .right-up div h3, section .container .right .right-down div h3 {
+    padding: 0%;
+  }
+  section .container .right .right-up div h3::before, section .container .right .right-down div h3::before {
+    content: none;
+  }
+
+  section.skills h1 {
+    font-size: 21px;
+    text-align: left;
+    padding-left: 12px;
+  }
+  section.skills .skill-set .skill-container .skill {
+    width: 90px;
+    height: 90px;
+    border: 6px solid #ffb400;
+  }
+  section.skills .skill-set .skill-container .skill::before {
+    width: 78px;
+    height: 78px;
+    top: -8px;
+    left: -6px;
+    border: 8px solid #2B2A2A;
+  }
+}
+@media only screen and (max-width: 380px) {
+  section .container .left .list-container {
+    width: 100%;
+    padding: 0%;
+  }
+  section .container .right {
+    padding: 12px;
+  }
+
+  section.skills .heading {
+    margin-bottom: 28px;
+  }
+}
+/*# sourceMappingURL=about.css.map */

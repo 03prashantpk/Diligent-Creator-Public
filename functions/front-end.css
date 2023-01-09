@@ -1,0 +1,232 @@
+.page_name {
+    font-family: 'Lobster', cursive;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFD15C;
+    font-size: 24px;
+}
+
+body {
+    scrollbar-width: thin;
+    /* "auto" or "thin" */
+    scrollbar-color: #FFD15C #75757557;
+    /* scroll thumb and track */
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #75757557;
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #FFD15C;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid #75757557;
+    /* creates padding around scroll thumb */
+}
+
+
+/* Works on Firefox */
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #FFD15C #75757557;
+}
+
+
+/* Works on Chrome, Edge, and Safari */
+
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #75757557;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #FFD15C;
+    border-radius: 20px;
+    border: 3px solid #75757557;
+}
+
+.keep-scrolling {
+    overflow-y: scroll;
+    cursor: pointer;
+    /* Add the ability to scroll y axis*/
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+
+.keep-scrolling::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Hide scrollbar for IE, Edge and Firefox */
+
+.keep-scrolling {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.profile_image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.up-down {
+    animation: up-down linear 4s;
+    animation-iteration-count: infinite;
+    transform-origin: 50% 50%;
+    -webkit-animation: up-down linear 4s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-transform-origin: 50% 50%;
+    -moz-animation: up-down linear 4s;
+    -moz-animation-iteration-count: infinite;
+    -moz-transform-origin: 50% 50%;
+    -o-animation: up-down linear 4s;
+    -o-animation-iteration-count: infinite;
+    -o-transform-origin: 50% 50%;
+    -ms-animation: up-down linear 4s;
+    -ms-animation-iteration-count: infinite;
+    -ms-transform-origin: 50% 50%;
+}
+
+@keyframes up-down {
+    0% {
+        transform: translate(1px, 20px);
+    }
+    24% {
+        transform: translate(1px, 30px);
+    }
+    50% {
+        transform: translate(1px, 12px);
+    }
+    74% {
+        transform: translate(1px, 22px);
+    }
+    100% {
+        transform: translate(1px, 22px);
+    }
+}
+
+@-moz-keyframes up-down {
+    0% {
+        -moz-transform: translate(1px, 20px);
+    }
+    24% {
+        -moz-transform: translate(1px, 30px);
+    }
+    50% {
+        -moz-transform: translate(1px, 12px);
+    }
+    74% {
+        -moz-transform: translate(1px, 22px);
+    }
+    100% {
+        -moz-transform: translate(1px, 22px);
+    }
+}
+
+@-webkit-keyframes up-down {
+    0% {
+        -webkit-transform: translate(1px, 20px);
+    }
+    24% {
+        -webkit-transform: translate(1px, 30px);
+    }
+    50% {
+        -webkit-transform: translate(1px, 12px);
+    }
+    74% {
+        -webkit-transform: translate(1px, 22px);
+    }
+    100% {
+        -webkit-transform: translate(1px, 22px);
+    }
+}
+
+@-o-keyframes up-down {
+    0% {
+        -o-transform: translate(1px, 20px);
+    }
+    24% {
+        -o-transform: translate(1px, 30px);
+    }
+    50% {
+        -o-transform: translate(1px, 12px);
+    }
+    74% {
+        -o-transform: translate(1px, 22px);
+    }
+    100% {
+        -o-transform: translate(1px, 22px);
+    }
+}
+
+@-ms-keyframes up-down {
+    0% {
+        -ms-transform: translate(1px, 20px);
+    }
+    24% {
+        -ms-transform: translate(1px, 30px);
+    }
+    50% {
+        -ms-transform: translate(1px, 12px);
+    }
+    74% {
+        -ms-transform: translate(1px, 22px);
+    }
+    100% {
+        -ms-transform: translate(1px, 22px);
+    }
+}
+
+#touch_me_message {
+    width: 22ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: 'Lobster', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    text-shadow: 2px 4px 12px #FFD15C;
+    color: #e9f7f7d7;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+.portfolio_outter {
+    height: 600px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 20px;
+    box-shadow: 1px -5px 46px 3px rgba(0, 0, 0, 0.068) inset;
+    -webkit-box-shadow: 1px -5px 46px 3px rgba(0, 0, 0, 0.096) inset;
+    -moz-box-shadow: 1px -5px 46px 3px rgba(0, 0, 0, 0.092) inset;
+    border-radius: 22px;
+    background-color: #F9F9FF;
+    background: url('https://assets.oneclass.com/oc-static/static/assets/images/pages/about/pattern.svg');
+}

@@ -1,0 +1,9 @@
+# Ignore all these files
+logs
+pages/
+connection.inc.php
+confidentials.php
+sections/
+vendor/
+index.html
+index2.html
